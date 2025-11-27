@@ -1,0 +1,105 @@
+'use client';
+
+import { useState, useEffect } from 'react';
+import Image from 'next/image';
+import Link from 'next/link';
+import { Menu, X } from 'lucide-react';
+import { motion, AnimatePresence } from 'framer-motion';
+
+export default function Navbar() {
+    const [isScrolled, setIsScrolled] = useState(false);
+    const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
+    useEffect(() => {
+        const handleScroll = () => {
+            setIsScrolled(window.scrollY > 20);
+        };
+        window.addEventListener('scroll', handleScroll);
+        return () => window.removeEventListener('scroll', handleScroll);
+    }, []);
+
+    const navLinks = [
+        { name: 'Inicio', href: '#home' },
+        { name: 'Pociones', href: '#products' },
+        { name: 'Magia', href: '#about' },
+        { name: 'Contacto', href: '#contact' },
+    ];
+
+    return (
+        <nav
+            className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-slate-950/80 backdrop-blur-md shadow-lg py-4' : 'bg-transparent py-6'
+                }`}
+        >
+            <div className="container mx-auto px-4 flex justify-between items-center">
+                <Link href="/" className="flex items-center gap-3 group">
+                    <div className="relative w-12 h-12">
+                        <Image
+                            src="/images/logo-icon.png"
+                            alt="Brujita Candy Logo"
+                            fill
+                            className="object-contain group-hover:scale-110 transition-transform duration-300"
+                        />
+                        <div className="absolute inset-0 bg-magic-purple blur-xl opacity-20 group-hover:opacity-40 transition-opacity -z-10" />
+                    </div>
+                    <span className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-white to-purple-200 font-sans">
+                        Brujita Candy
+                    </span>
+                </Link>
+
+                {/* Desktop Menu */}
+                <div className="hidden md:flex items-center gap-8">
+                    {navLinks.map((link) => (
+                        <Link
+                            key={link.name}
+                            href={link.href}
+                            className="text-white/80 hover:text-magic-lime transition-colors text-sm font-medium tracking-wide hover:text-glow"
+                        >
+                            {link.name}
+                        </Link>
+                    ))}
+                    <a
+                        href="https://wa.me/5493874094328?text=Hola!%20Me%20gustar%C3%ADa%20hacer%20un%20pedido%20m%C3%A1gico%20%F0%9F%8D%AC"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="bg-magic-purple hover:bg-purple-600 text-white px-6 py-2 rounded-full font-medium transition-all hover:shadow-[0_0_20px_rgba(168,85,247,0.5)] transform hover:-translate-y-0.5"
+                    >
+                        Pedir Ahora
+                    </a>
+                </div>
+
+                {/* Mobile Toggle */}
+                <button
+                    className="md:hidden text-white"
+                    onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+                >
+                    {isMobileMenuOpen ? <X /> : <Menu />}
+                </button>
+            </div>
+
+            {/* Mobile Menu */}
+            <AnimatePresence>
+                {isMobileMenuOpen && (
+                    <motion.div
+                        initial={{ opacity: 0, height: 0 }}
+                        animate={{ opacity: 1, height: 'auto' }}
+                        exit={{ opacity: 0, height: 0 }}
+                        className="md:hidden bg-slate-950/95 backdrop-blur-xl border-b border-white/10"
+                    >
+                        <div className="flex flex-col p-4 gap-4">
+                            {navLinks.map((link) => (
+                                <Link
+                                    key={link.name}
+                                    href={link.href}
+                                    onClick={() => setIsMobileMenuOpen(false)}
+                                    className="text-white/80 hover:text-magic-lime py-2 text-center"
+                                >
+                                    {link.name}
+                                </Link>
+                            ))}
+                        </div>
+                    </motion.div>
+                )}
+            </AnimatePresence>
+        </nav>
+    );
+}
