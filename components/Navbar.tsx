@@ -39,7 +39,7 @@ export default function Navbar() {
                             fill
                             className="object-contain group-hover:scale-110 transition-transform duration-300"
                         />
-                        <div className="absolute inset-0 bg-magic-purple blur-xl opacity-20 group-hover:opacity-40 transition-opacity -z-10" />
+                        <div className="absolute inset-0 bg-christmas-red blur-xl opacity-20 group-hover:opacity-40 transition-opacity -z-10" />
                     </div>
                     <span className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-white to-purple-200 font-sans">
                         Brujita Candy
@@ -52,7 +52,7 @@ export default function Navbar() {
                         <Link
                             key={link.name}
                             href={link.href}
-                            className="text-white/80 hover:text-magic-lime transition-colors text-sm font-medium tracking-wide hover:text-glow"
+                            className="text-white/80 hover:text-christmas-gold transition-colors text-sm font-medium tracking-wide hover:text-glow"
                         >
                             {link.name}
                         </Link>
@@ -61,7 +61,7 @@ export default function Navbar() {
                         href="https://wa.me/5493874094328?text=Hola!%20Me%20gustar%C3%ADa%20hacer%20un%20pedido%20m%C3%A1gico%20%F0%9F%8D%AC"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="bg-magic-purple hover:bg-purple-600 text-white px-6 py-2 rounded-full font-medium transition-all hover:shadow-[0_0_20px_rgba(168,85,247,0.5)] transform hover:-translate-y-0.5"
+                        className="bg-christmas-red hover:bg-red-600 text-white px-6 py-2 rounded-full font-medium transition-all hover:shadow-[0_0_20px_rgba(239,68,68,0.5)] transform hover:-translate-y-0.5"
                     >
                         Pedir Ahora
                     </a>
@@ -91,7 +91,7 @@ export default function Navbar() {
                                     key={link.name}
                                     href={link.href}
                                     onClick={() => setIsMobileMenuOpen(false)}
-                                    className="text-white/80 hover:text-magic-lime py-2 text-center"
+                                    className="text-white/80 hover:text-christmas-gold py-2 text-center"
                                 >
                                     {link.name}
                                 </Link>

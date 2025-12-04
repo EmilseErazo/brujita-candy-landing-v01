@@ -338,7 +338,7 @@ export default function ProductGrid() {
                             viewport={{ once: true }}
                             className="text-3xl md:text-5xl font-bold text-white mb-4"
                         >
-                            Nuestros <span className="text-magic-purple">Hechizos</span>
+                            Nuestros <span className="text-christmas-red">Hechizos</span>
                         </motion.h2>
                         <motion.p
                             initial={{ opacity: 0, y: 20 }}
@@ -376,7 +376,7 @@ export default function ProductGrid() {
                             viewport={{ once: true }}
                             className="text-3xl md:text-5xl font-bold text-white mb-4"
                         >
-                            Nuestras <span className="text-magic-purple">Pocimas Magicas</span>
+                            Nuestras <span className="text-christmas-red">Pocimas Magicas</span>
                         </motion.h2>
                         <motion.p
                             initial={{ opacity: 0, y: 20 }}
@@ -414,7 +414,7 @@ export default function ProductGrid() {
                             viewport={{ once: true }}
                             className="text-3xl md:text-5xl font-bold text-white mb-4"
                         >
-                            <span className="text-magic-purple">Noches Magicas</span>
+                            <span className="text-christmas-red">Noches Magicas</span>
                         </motion.h2>
                         <motion.p
                             initial={{ opacity: 0, y: 20 }}
@@ -484,7 +484,7 @@ export default function ProductGrid() {
                                             <button
                                                 key={idx}
                                                 onClick={() => setSelectedImage(img)}
-                                                className={`relative h-20 rounded-lg overflow-hidden border-2 transition-all ${selectedImage === img ? 'border-magic-purple' : 'border-transparent hover:border-white/20'}`}
+                                                className={`relative h-20 rounded-lg overflow-hidden border-2 transition-all ${selectedImage === img ? 'border-christmas-red' : 'border-transparent hover:border-white/20'}`}
                                             >
                                                 <Image src={img} alt={`Gallery ${idx}`} fill className="object-cover" />
                                             </button>
@@ -496,10 +496,10 @@ export default function ProductGrid() {
                                 <div className="p-6 lg:p-8 space-y-6">
                                     <div>
                                         <h3 className="text-3xl font-bold text-white mb-2 flex items-center gap-2">
-                                            <Sparkles className="text-magic-orange" />
+                                            <Sparkles className="text-christmas-gold" />
                                             {selectedProduct.title}
                                         </h3>
-                                        <span className="px-3 py-1 rounded-full text-xs font-bold bg-magic-purple/20 text-magic-purple border border-magic-purple/20">
+                                        <span className="px-3 py-1 rounded-full text-xs font-bold bg-christmas-red/20 text-christmas-red border border-christmas-red/20">
                                             {selectedProduct.tag}
                                         </span>
                                     </div>
@@ -515,7 +515,7 @@ export default function ProductGrid() {
                                                 {selectedProduct.features.map((feature: string, idx: number) => (
                                                     <li key={idx} className="flex items-start gap-3 text-slate-300 text-sm">
                                                         <div className="mt-1 min-w-[16px]">
-                                                            <Check size={16} className="text-magic-lime" />
+                                                            <Check size={16} className="text-christmas-green" />
                                                         </div>
                                                         <span>{feature}</span>
                                                     </li>
@@ -531,7 +531,7 @@ export default function ProductGrid() {
                                             )}`}
                                             target="_blank"
                                             rel="noopener noreferrer"
-                                            className="block w-full py-4 bg-magic-purple hover:bg-purple-600 text-white font-bold text-center rounded-xl transition-all hover:shadow-[0_0_20px_rgba(168,85,247,0.4)]"
+                                            className="block w-full py-4 bg-christmas-red hover:bg-red-600 text-white font-bold text-center rounded-xl transition-all hover:shadow-[0_0_20px_rgba(239,68,68,0.4)]"
                                         >
                                             Consultar Presupuesto
                                         </a>

@@ -22,7 +22,7 @@ export default function ProductCard({ title, price, description, image, tag, del
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay }}
             onClick={onClick}
-            className={`group relative bg-slate-900/50 border border-white/5 rounded-3xl overflow-hidden hover:border-magic-purple/50 transition-all duration-300 hover:shadow-[0_0_30px_rgba(168,85,247,0.15)] ${onClick ? 'cursor-pointer' : ''}`}
+            className={`group relative bg-slate-900/50 border border-white/5 rounded-3xl overflow-hidden hover:border-christmas-red/50 transition-all duration-300 hover:shadow-[0_0_30px_rgba(239,68,68,0.15)] ${onClick ? 'cursor-pointer' : ''}`}
         >
             {/* Image Container */}
             <div className="relative h-64 w-full overflow-hidden bg-slate-800/50">
@@ -51,7 +51,7 @@ export default function ProductCard({ title, price, description, image, tag, del
             {/* Content */}
             <div className="p-6 relative z-20">
                 <div className="flex justify-between items-start mb-2">
-                    <h3 className="text-xl font-bold text-white group-hover:text-magic-purple transition-colors">{title}</h3>
+                    <h3 className="text-xl font-bold text-white group-hover:text-christmas-red transition-colors">{title}</h3>
                     <div className="flex items-center gap-1 text-yellow-400">
                         <Star size={14} fill="currentColor" />
                         <span className="text-sm font-medium">5.0</span>
@@ -64,7 +64,7 @@ export default function ProductCard({ title, price, description, image, tag, del
 
                 <div className="flex items-center justify-between">
                     <span className="text-2xl font-bold text-white">{price}</span>
-                    <button className="w-10 h-10 rounded-full bg-magic-purple flex items-center justify-center text-white hover:bg-white hover:text-magic-purple transition-all transform hover:scale-110 hover:rotate-12">
+                    <button className="w-10 h-10 rounded-full bg-christmas-red flex items-center justify-center text-white hover:bg-white hover:text-christmas-red transition-all transform hover:scale-110 hover:rotate-12">
                         <ShoppingBag size={18} />
                     </button>
                 </div>

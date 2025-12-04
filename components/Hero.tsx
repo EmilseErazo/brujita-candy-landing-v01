@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion';
 import { Sparkles, ArrowRight } from 'lucide-react';
+import Image from 'next/image';
 
 export default function Hero() {
     return (
@@ -11,6 +12,25 @@ export default function Hero() {
                 <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-magic-purple/20 rounded-full blur-[100px] animate-pulse-slow" />
                 <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-magic-orange/20 rounded-full blur-[100px] animate-pulse-slow delay-1000" />
                 <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-slate-950/50 radial-gradient-mask" />
+
+                {/* Christmas Decorations */}
+                <motion.div
+                    initial={{ opacity: 0, x: -50 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 1, delay: 0.5 }}
+                    className="absolute bottom-0 left-0 md:left-10 w-48 h-64 md:w-64 md:h-80 z-0 opacity-80"
+                >
+                    <Image src="/images/christmas-tree.png" alt="Christmas Tree" fill className="object-contain" />
+                </motion.div>
+
+                <motion.div
+                    initial={{ opacity: 0, x: 50 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 1, delay: 0.8 }}
+                    className="absolute bottom-10 right-0 md:right-10 w-32 h-48 md:w-48 md:h-64 z-0 opacity-80"
+                >
+                    <Image src="/images/reindeer-character.png" alt="Reindeer" fill className="object-contain" />
+                </motion.div>
             </div>
 
             <div className="container mx-auto px-4 relative z-10 text-center">
@@ -20,8 +40,8 @@ export default function Hero() {
                     transition={{ duration: 0.8 }}
                     className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 backdrop-blur-sm mb-8"
                 >
-                    <Sparkles size={16} className="text-magic-lime" />
-                    <span className="text-sm text-slate-300 tracking-wide">Dulces artesanales con un toque de magia</span>
+                    <Sparkles size={16} className="text-christmas-gold" />
+                    <span className="text-sm text-slate-300 tracking-wide">Dulces artesanales con un toque de Magia Navideña</span>
                 </motion.div>
 
                 <motion.h1
@@ -31,8 +51,8 @@ export default function Hero() {
                     className="text-5xl md:text-7xl lg:text-8xl font-bold text-white mb-6 tracking-tight"
                 >
                     Sabor que <br />
-                    <span className="text-transparent bg-clip-text bg-gradient-to-r from-magic-purple via-purple-400 to-magic-orange animate-shimmer bg-[length:200%_auto]">
-                        Hechiza
+                    <span className="text-transparent bg-clip-text bg-gradient-to-r from-christmas-red via-red-500 to-christmas-gold animate-shimmer bg-[length:200%_auto]">
+                        Hechiza tu Navidad
                     </span>
                 </motion.h1>
 
@@ -52,11 +72,11 @@ export default function Hero() {
                     transition={{ duration: 0.8, delay: 0.6 }}
                     className="flex flex-col md:flex-row gap-4 justify-center items-center"
                 >
-                    <a href="#products" className="group relative px-8 py-4 bg-magic-purple rounded-full text-white font-bold text-lg overflow-hidden transition-all hover:scale-105 hover:shadow-[0_0_40px_rgba(168,85,247,0.4)]">
+                    <a href="#products" className="group relative px-8 py-4 bg-christmas-red rounded-full text-white font-bold text-lg overflow-hidden transition-all hover:scale-105 hover:shadow-[0_0_40px_rgba(239,68,68,0.4)]">
                         <span className="relative z-10 flex items-center gap-2">
-                            Ver Catálogo <ArrowRight className="group-hover:translate-x-1 transition-transform" />
+                            Ver Catálogo Navideño <ArrowRight className="group-hover:translate-x-1 transition-transform" />
                         </span>
-                        <div className="absolute inset-0 bg-gradient-to-r from-purple-600 to-magic-purple opacity-0 group-hover:opacity-100 transition-opacity" />
+                        <div className="absolute inset-0 bg-gradient-to-r from-red-600 to-christmas-red opacity-0 group-hover:opacity-100 transition-opacity" />
                     </a>
 
                     <a href="#about" className="px-8 py-4 rounded-full text-white font-medium border border-white/10 hover:bg-white/5 transition-all hover:border-magic-lime/50">

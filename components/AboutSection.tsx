@@ -7,7 +7,7 @@ import { Heart, Star, Calendar } from 'lucide-react';
 export default function AboutSection() {
     return (
         <section id="about" className="py-24 relative overflow-hidden">
-            <div className="absolute inset-0 bg-magic-purple/5" />
+            <div className="absolute inset-0 bg-christmas-red/5" />
 
             <div className="container mx-auto px-4 relative z-10">
                 <div className="max-w-6xl mx-auto">
@@ -19,9 +19,9 @@ export default function AboutSection() {
                             viewport={{ once: true }}
                             className="text-3xl md:text-5xl font-bold text-white mb-6"
                         >
-                            Nuestra <span className="text-magic-purple">Historia Mágica</span>
+                            Nuestra <span className="text-christmas-red">Historia Mágica</span>
                         </motion.h2>
-                        <div className="w-24 h-1 bg-gradient-to-r from-magic-purple to-magic-orange mx-auto rounded-full" />
+                        <div className="w-24 h-1 bg-gradient-to-r from-christmas-red to-christmas-gold mx-auto rounded-full" />
                     </div>
 
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-20">
@@ -50,7 +50,7 @@ export default function AboutSection() {
                             viewport={{ once: true }}
                             className="space-y-6 text-slate-300 text-lg leading-relaxed"
                         >
-                            <p className="first-letter:text-5xl first-letter:font-bold first-letter:text-magic-purple first-letter:mr-2 float-left">
+                            <p className="first-letter:text-5xl first-letter:font-bold first-letter:text-christmas-red first-letter:mr-2 float-left">
                                 ¡Hola! Soy Emilse, el corazón y la brujita fundadora de este sueño.
                             </p>
                             <p>
@@ -61,7 +61,7 @@ export default function AboutSection() {
                             </p>
                             <div className="flex items-center gap-4 p-4 bg-white/5 rounded-xl border border-white/10">
                                 <div className="p-3 bg-magic-purple/20 rounded-full">
-                                    <Star className="text-magic-purple" />
+                                    <Star className="text-christmas-gold" />
                                 </div>
                                 <div>
                                     <h4 className="text-white font-bold">Certificación Internacional</h4>
@@ -86,7 +86,7 @@ export default function AboutSection() {
                             <p>
                                 Este sueño no sería posible sin mi equipo mágico: mi esposo, mi gran compañero de aventuras; mi papá "Nene", el genio que soluciona y materializa cada idea; y mi mamá Susana, la artista detrás de las costuras. Y por supuesto, mis hijos Agustín, Emma y Felipe, ¡mis pequeños grandes ayudantes!
                             </p>
-                            <p className="font-medium text-white italic border-l-4 border-magic-orange pl-4 my-6">
+                            <p className="font-medium text-white italic border-l-4 border-christmas-gold pl-4 my-6">
                                 "Cuando elegís Brujita Candy Bar, estás invitando a tu festejo a una familia que pone el corazón en cada detalle."
                             </p>
                         </motion.div>

@@ -15,6 +15,11 @@ const config: Config = {
                     orange: '#f97316',
                     lime: '#a3e635',
                 },
+                christmas: {
+                    red: '#ef4444',
+                    green: '#15803d',
+                    gold: '#eab308',
+                },
             },
             backgroundImage: {
                 "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
