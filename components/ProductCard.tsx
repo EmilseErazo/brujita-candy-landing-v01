@@ -3,7 +3,7 @@
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 import { formatPrice } from '@/lib/utils';
-import { ShoppingCart, Sparkles } from 'lucide-react';
+import { ShoppingCart, Sparkles, ZoomIn } from 'lucide-react';
 
 interface ProductCardProps {
     title: string;
@@ -17,6 +17,7 @@ interface ProductCardProps {
     isSpecial?: boolean;
     onAddToCart?: () => void;
     onClick?: () => void;
+    onZoom?: () => void;
 }
 
 export default function ProductCard({
@@ -30,7 +31,8 @@ export default function ProductCard({
     delay = 0,
     isSpecial = false,
     onAddToCart,
-    onClick
+    onClick,
+    onZoom
 }: ProductCardProps) {
     const displayPriceCash = priceCash || (typeof price === 'number' ? price : 0);
     const displayPriceCard = priceCard || (typeof price === 'number' ? price * 1.2 : 0);
@@ -60,6 +62,17 @@ export default function ProductCard({
                         {tag}
                     </span>
                 </div>
+                {onZoom && (
+                    <button
+                        onClick={(e) => {
+                            e.stopPropagation();
+                            onZoom();
+                        }}
+                        className="absolute top-4 right-4 p-2 bg-black/40 backdrop-blur-sm rounded-full text-white/80 hover:text-white hover:bg-black/60 transition-colors opacity-0 group-hover:opacity-100"
+                    >
+                        <ZoomIn size={18} />
+                    </button>
+                )}
             </div>
 
             <div className="p-6">

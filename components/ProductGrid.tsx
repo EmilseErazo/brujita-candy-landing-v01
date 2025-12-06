@@ -5,6 +5,7 @@ import ProductCard from './ProductCard';
 import { motion, AnimatePresence } from 'framer-motion';
 import { X, Check, Sparkles, ZoomIn } from 'lucide-react';
 import Image from 'next/image';
+import Lightbox from './Lightbox';
 
 const products = [
     {
@@ -319,6 +320,7 @@ const products = [
 export default function ProductGrid() {
     const [selectedProduct, setSelectedProduct] = useState<any>(null);
     const [selectedImage, setSelectedImage] = useState<string | null>(null);
+    const [lightboxImage, setLightboxImage] = useState<string | null>(null);
 
     const handleProductClick = (product: any) => {
         if (product.isSpecial) {
@@ -362,6 +364,7 @@ export default function ProductGrid() {
                                 tag={product.tag}
                                 delay={index * 0.1}
                                 onClick={() => handleProductClick(product)}
+                                onZoom={() => setLightboxImage(product.image)}
                             />
                         ))}
                     </div>
@@ -400,6 +403,7 @@ export default function ProductGrid() {
                                 tag={product.tag}
                                 delay={index * 0.1}
                                 onClick={() => handleProductClick(product)}
+                                onZoom={() => setLightboxImage(product.image)}
                             />
                         ))}
                     </div>
@@ -438,6 +442,7 @@ export default function ProductGrid() {
                                 tag={product.tag}
                                 delay={index * 0.1}
                                 onClick={() => handleProductClick(product)}
+                                onZoom={() => setLightboxImage(product.image)}
                             />
                         ))}
                     </div>
@@ -476,8 +481,14 @@ export default function ProductGrid() {
                                             src={selectedImage || selectedProduct.image}
                                             alt={selectedProduct.title}
                                             fill
-                                            className="object-cover"
+                                            className="object-cover cursor-zoom-in hover:scale-105 transition-transform duration-500"
+                                            onClick={() => setLightboxImage(selectedImage || selectedProduct.image)}
                                         />
+                                        <div className="absolute top-4 right-4 pointer-events-none">
+                                            <div className="bg-black/40 backdrop-blur-sm p-2 rounded-full text-white/80">
+                                                <ZoomIn size={20} />
+                                            </div>
+                                        </div>
                                     </div>
                                     <div className="grid grid-cols-3 gap-2">
                                         {selectedProduct.gallery?.map((img: string, idx: number) => (
@@ -542,6 +553,11 @@ export default function ProductGrid() {
                     </motion.div>
                 )}
             </AnimatePresence>
+
+            <Lightbox
+                image={lightboxImage}
+                onClose={() => setLightboxImage(null)}
+            />
         </section>
     );
 }

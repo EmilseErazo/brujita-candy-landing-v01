@@ -4,9 +4,10 @@ import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import ProductCard from './ProductCard';
 import { useCart } from '@/context/CartContext';
-import { X, Check, Sparkles, ShoppingCart } from 'lucide-react';
+import { X, Check, Sparkles, ShoppingCart, ZoomIn } from 'lucide-react';
 import Image from 'next/image';
 import { formatPrice } from '@/lib/utils';
+import Lightbox from './Lightbox';
 
 const gardenProducts = [
     {
@@ -195,6 +196,7 @@ export default function GardenSection() {
     const { addToCart } = useCart();
     const [selectedProduct, setSelectedProduct] = useState<any>(null);
     const [selectedImage, setSelectedImage] = useState<string | null>(null);
+    const [lightboxImage, setLightboxImage] = useState<string | null>(null);
 
     const handleProductClick = (product: any) => {
         setSelectedProduct(product);
@@ -243,6 +245,7 @@ export default function GardenSection() {
                             delay={index * 0.1}
                             onClick={() => handleProductClick(product)}
                             onAddToCart={() => handleAddToCart(product)}
+                            onZoom={() => setLightboxImage(product.image)}
                         />
                     ))}
                 </div>
@@ -280,8 +283,14 @@ export default function GardenSection() {
                                             src={selectedImage || selectedProduct.image}
                                             alt={selectedProduct.title}
                                             fill
-                                            className="object-cover"
+                                            className="object-cover cursor-zoom-in hover:scale-105 transition-transform duration-500"
+                                            onClick={() => setLightboxImage(selectedImage || selectedProduct.image)}
                                         />
+                                        <div className="absolute top-4 right-4 pointer-events-none">
+                                            <div className="bg-black/40 backdrop-blur-sm p-2 rounded-full text-white/80">
+                                                <ZoomIn size={20} />
+                                            </div>
+                                        </div>
                                     </div>
                                     <div className="grid grid-cols-3 gap-2">
                                         {selectedProduct.gallery?.map((img: string, idx: number) => (
@@ -353,6 +362,11 @@ export default function GardenSection() {
                     </motion.div>
                 )}
             </AnimatePresence>
+
+            <Lightbox
+                image={lightboxImage}
+                onClose={() => setLightboxImage(null)}
+            />
         </section>
     );
 }
