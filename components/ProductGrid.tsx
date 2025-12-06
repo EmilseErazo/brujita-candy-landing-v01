@@ -330,7 +330,7 @@ export default function ProductGrid() {
         <section id="products" className="py-24 relative">
             <div className="container mx-auto px-4">
                 {/* Hechizos Section */}
-                <div className="mb-24">
+                <div id="hechizos" className="mb-24 scroll-mt-24">
                     <div className="text-center mb-16">
                         <motion.h2
                             initial={{ opacity: 0, y: 20 }}
@@ -368,7 +368,7 @@ export default function ProductGrid() {
                 </div>
 
                 {/* Pocimas Section */}
-                <div className="mb-24">
+                <div id="pocimas" className="mb-24 scroll-mt-24">
                     <div className="text-center mb-16">
                         <motion.h2
                             initial={{ opacity: 0, y: 20 }}
@@ -406,7 +406,7 @@ export default function ProductGrid() {
                 </div>
 
                 {/* Noches Magicas Section */}
-                <div>
+                <div id="noches-magicas" className="scroll-mt-24">
                     <div className="text-center mb-16">
                         <motion.h2
                             initial={{ opacity: 0, y: 20 }}
