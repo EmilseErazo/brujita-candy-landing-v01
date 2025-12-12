@@ -50,7 +50,7 @@ export default function Navbar() {
                         <div className="absolute inset-0 bg-christmas-red blur-xl opacity-20 group-hover:opacity-40 transition-opacity -z-10" />
                     </div>
                     <span className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-white to-purple-200 font-sans">
-                        Brujita Candy
+                        Brujita Candy Bar
                     </span>
                 </Link>
 

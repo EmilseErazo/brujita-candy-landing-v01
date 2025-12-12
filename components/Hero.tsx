@@ -8,29 +8,16 @@ export default function Hero() {
     return (
         <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
             {/* Background Elements */}
-            <div className="absolute inset-0 overflow-hidden pointer-events-none">
-                <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-magic-purple/20 rounded-full blur-[100px] animate-pulse-slow" />
-                <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-magic-orange/20 rounded-full blur-[100px] animate-pulse-slow delay-1000" />
-                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-slate-950/50 radial-gradient-mask" />
-
-                {/* Christmas Decorations */}
-                <motion.div
-                    initial={{ opacity: 0, x: -50 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 1, delay: 0.5 }}
-                    className="absolute bottom-0 left-0 md:left-10 w-48 h-64 md:w-64 md:h-80 z-0 opacity-80"
-                >
-                    <Image src="/images/christmas-tree.png" alt="Christmas Tree" fill className="object-contain" />
-                </motion.div>
-
-                <motion.div
-                    initial={{ opacity: 0, x: 50 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 1, delay: 0.8 }}
-                    className="absolute bottom-10 right-0 md:right-10 w-32 h-48 md:w-48 md:h-64 z-0 opacity-80"
-                >
-                    <Image src="/images/reindeer-character.png" alt="Reindeer" fill className="object-contain" />
-                </motion.div>
+            {/* Background Image */}
+            <div className="absolute inset-0 z-0">
+                <Image
+                    src="/images/home-banner-merlina.jpg"
+                    alt="Brujita Candy Merlina Theme"
+                    fill
+                    className="object-cover"
+                    priority
+                />
+                <div className="absolute inset-0 bg-slate-950/70" /> {/* Overlay for readability */}
             </div>
 
             <div className="container mx-auto px-4 relative z-10 text-center">

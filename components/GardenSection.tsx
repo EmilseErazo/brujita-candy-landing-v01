@@ -14,8 +14,8 @@ const gardenProducts = [
         id: 'garden-1',
         title: "El Primer Encanto Escolar",
         price: 7300,
-        priceCash: 7300,
-        priceCard: 10440,
+        originalPrice: 8760,
+        discountPercentage: 20,
         description: "¿Buscás lo esencial para que sus primeros días sean pura ternura? Este set es la dosis justa de magia textil para acompañar sus meriendas con sus personajes favoritos. Simple, suave y lleno de amor.",
         image: "/images/set-jardin-messi.jpg",
         tag: "Set Escolar",
@@ -36,6 +36,8 @@ const gardenProducts = [
         price: 9800,
         priceCash: 9800,
         priceCard: 11760,
+        originalPrice: 11760,
+        discountPercentage: 20,
         description: "¿Listo para compartir momentos deliciosos en el jardín? Nuestro 'Hechizo clasico escolar' suma lo indispensable para que disfrutar de la leche sea una aventura diaria.",
         image: "/images/hechizo-clasico-capybara.jpg",
         tag: "Set Completo",
@@ -58,6 +60,8 @@ const gardenProducts = [
         price: 15550,
         priceCash: 15550,
         priceCard: 18660,
+        originalPrice: 18660,
+        discountPercentage: 20,
         description: "¡La fórmula mágica para la hora más feliz del jardín! Este set asegura que el momento de la merienda sea completo y súper cómodo, con toda lo necesaria para que disfruten desde el jugo hasta las galletitas favoritas junto a sus personajes amados.",
         image: "/images/pocimas-recreo-frozen.jpg",
         tag: "Set Completo",
@@ -81,6 +85,8 @@ const gardenProducts = [
         price: 8400,
         priceCash: 8400,
         priceCard: 10080,
+        originalPrice: 10080,
+        discountPercentage: 20,
         description: "¿Ya tenés la mantelería y solo necesitás renovar la taza? Un pequeño encanto para renovar tu kit de merienda con diseños que divierten.",
         image: "/images/pack-magico-dino-1.jpg",
         tag: "Kit Renovación",
@@ -101,6 +107,8 @@ const gardenProducts = [
         price: 26790,
         priceCash: 26790,
         priceCard: 32150,
+        originalPrice: 32150,
+        discountPercentage: 20,
         description: "Para días llenos de energía y juegos. Este pack asegura que no les falte nada: desde la merienda hasta la hidratación, todo personalizado para que nunca pierdan sus tesoros.",
         image: "/images/hechizo-aventuras-toystory.jpg",
         tag: "Set Premium",
@@ -125,6 +133,8 @@ const gardenProducts = [
         price: 37690,
         priceCash: 37690,
         priceCard: 45230,
+        originalPrice: 45230,
+        discountPercentage: 20,
         description: "¡Todo listo para cargar la magia a la espalda! Un combo práctico que une lo mejor de la merienda con nuestra mochila de jardín, perfecta para llevar sus sueños a todas partes.",
         image: "/images/pocima-escolar-avengers.jpg",
         tag: "Pack Mochila",
@@ -148,6 +158,8 @@ const gardenProducts = [
         price: 54390,
         priceCash: 54390,
         priceCard: 65270,
+        originalPrice: 65270,
+        discountPercentage: 20,
         description: "La solución definitiva para una vuelta a clases legendaria. Es nuestra propuesta más completa. No tenés que preocuparte por nada; nosotros armamos el kit total para que tu pequeño/a brille en el jardín.",
         image: "/images/pocima-maestra-bluey.jpg",
         tag: "Pack Definitivo",
@@ -174,6 +186,8 @@ const gardenProducts = [
         price: 30000,
         priceCash: 30000,
         priceCard: 36000,
+        originalPrice: 36000,
+        discountPercentage: 20,
         description: "Comodidad y estilo para sus primeros pasos. Mochilas con gran capacidad, tiras acolchadas y el diseño del personaje que más aman.",
         image: "/images/mochilas-magicas-group.jpg",
         tag: "Mochila",
@@ -246,6 +260,8 @@ export default function GardenSection() {
                             onClick={() => handleProductClick(product)}
                             onAddToCart={() => handleAddToCart(product)}
                             onZoom={() => setLightboxImage(product.image)}
+                            originalPrice={(product as any).originalPrice}
+                            discountPercentage={(product as any).discountPercentage}
                         />
                     ))}
                 </div>

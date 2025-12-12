@@ -18,6 +18,8 @@ interface ProductCardProps {
     onAddToCart?: () => void;
     onClick?: () => void;
     onZoom?: () => void;
+    originalPrice?: number;
+    discountPercentage?: number;
 }
 
 export default function ProductCard({
@@ -32,7 +34,9 @@ export default function ProductCard({
     isSpecial = false,
     onAddToCart,
     onClick,
-    onZoom
+    onZoom,
+    originalPrice,
+    discountPercentage
 }: ProductCardProps) {
     const displayPriceCash = priceCash || (typeof price === 'number' ? price : 0);
     const displayPriceCard = priceCard || (typeof price === 'number' ? price * 1.2 : 0);
@@ -84,17 +88,35 @@ export default function ProductCard({
                 </p>
                 <div className="flex items-center justify-between mt-auto">
                     <div className="flex flex-col">
-                        {typeof price === 'number' || priceCash ? (
-                            <>
-                                <span className="text-lg font-bold text-white">
-                                    ${formatPrice(displayPriceCash)} <span className="text-xs font-normal text-slate-400">(Efvo/Transf)</span>
+                        {originalPrice ? (
+                            <div className="flex flex-col">
+                                <span className="text-lg text-slate-400 line-through font-semibold">
+                                    ${formatPrice(originalPrice)}
                                 </span>
-                                <span className="text-sm text-slate-400">
-                                    ${formatPrice(displayPriceCard)} <span className="text-xs">(Tarjeta)</span>
+                                <span className="text-xl font-bold text-christmas-red flex flex-wrap items-baseline gap-1">
+                                    ${formatPrice(typeof price === 'number' ? price : 0)}
+                                    <span className="text-xs font-normal text-christmas-red">con Transferencia o depósito</span>
                                 </span>
-                            </>
+                                {discountPercentage && (
+                                    <span className="text-xs mt-1 block leading-tight">
+                                        <span className="text-christmas-red font-bold">{discountPercentage}% de descuento</span>
+                                        <span className="text-slate-500"> pagando con transferencia o efectivo</span>
+                                    </span>
+                                )}
+                            </div>
                         ) : (
-                            <span className="text-xl font-bold text-white">{price}</span>
+                            typeof price === 'number' || priceCash ? (
+                                <>
+                                    <span className="text-lg font-bold text-white">
+                                        ${formatPrice(displayPriceCash)} <span className="text-xs font-normal text-slate-400">(Efvo/Transf)</span>
+                                    </span>
+                                    <span className="text-sm text-slate-400">
+                                        ${formatPrice(displayPriceCard)} <span className="text-xs">(Tarjeta)</span>
+                                    </span>
+                                </>
+                            ) : (
+                                <span className="text-xl font-bold text-white">{price}</span>
+                            )
                         )}
                     </div>
                     {onAddToCart ? (
