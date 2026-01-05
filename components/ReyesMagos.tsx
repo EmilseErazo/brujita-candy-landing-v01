@@ -4,14 +4,14 @@ import { motion } from 'framer-motion';
 import { useEffect, useState } from 'react';
 import Image from 'next/image';
 
-export default function SantaClaus() {
+export default function ReyesMagos() {
     const [isVisible, setIsVisible] = useState(false);
 
     useEffect(() => {
         const interval = setInterval(() => {
             setIsVisible(true);
-            setTimeout(() => setIsVisible(false), 10000); // Hide after animation
-        }, 20000); // Run every 20 seconds
+            setTimeout(() => setIsVisible(false), 15000); // Hide after animation
+        }, 30000); // Run every 30 seconds
 
         // Initial run
         setTimeout(() => setIsVisible(true), 2000);
@@ -26,17 +26,17 @@ export default function SantaClaus() {
                     initial={{ x: '-100vw', y: 0 }}
                     animate={{
                         x: '100vw',
-                        y: [0, -20, 0, 20, 0]
+                        y: [0, -10, 0, 10, 0]
                     }}
                     transition={{
-                        x: { duration: 8, ease: "linear" },
-                        y: { duration: 8, repeat: Infinity, ease: "easeInOut" }
+                        x: { duration: 12, ease: "linear" }, // Slower than Santa
+                        y: { duration: 4, repeat: Infinity, ease: "easeInOut" }
                     }}
-                    className="absolute top-10 w-48 h-48 filter drop-shadow-lg"
+                    className="absolute top-20 w-80 h-64 filter drop-shadow-lg" // Larger size for 3 characters
                 >
                     <Image
-                        src="/images/santa-character.png"
-                        alt="Santa Claus"
+                        src="/images/reyes-magos-character.png"
+                        alt="Reyes Magos"
                         fill
                         className="object-contain"
                     />

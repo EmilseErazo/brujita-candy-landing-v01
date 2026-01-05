@@ -20,6 +20,11 @@ const config: Config = {
                     green: '#15803d',
                     gold: '#eab308',
                 },
+                reyes: {
+                    gold: '#FFD700',
+                    purple: '#6b21a8',
+                    blue: '#1e3a8a',
+                },
             },
             backgroundImage: {
                 "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",

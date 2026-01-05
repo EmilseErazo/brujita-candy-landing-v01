@@ -6,8 +6,8 @@ import ProductGrid from '@/components/ProductGrid';
 import AboutSection from '@/components/AboutSection';
 import Footer from '@/components/Footer';
 import WhatsAppButton from '@/components/WhatsAppButton';
-import Snowfall from '@/components/Snowfall';
-import SantaClaus from '@/components/SantaClaus';
+import Starfall from '@/components/Starfall';
+import ReyesMagos from '@/components/ReyesMagos';
 import GardenSection from '@/components/GardenSection';
 import CartSidebar from '@/components/CartSidebar';
 import CartFloatingButton from '@/components/CartFloatingButton';
@@ -17,9 +17,9 @@ import { MessageCircle, Instagram, Facebook } from 'lucide-react';
 export default function Home() {
     return (
         <CartProvider>
-            <main className="min-h-screen bg-slate-950 text-white selection:bg-christmas-red selection:text-white relative">
-                <Snowfall />
-                <SantaClaus />
+            <main className="min-h-screen bg-slate-950 text-white selection:bg-reyes-purple selection:text-white relative">
+                <Starfall />
+                <ReyesMagos />
                 <Navbar />
                 <CartSidebar />
                 <CartFloatingButton />
@@ -36,7 +36,7 @@ export default function Home() {
                 <section id="contact" className="py-24 relative">
                     <div className="container mx-auto px-4 text-center">
                         <h2 className="text-3xl md:text-5xl font-bold text-white mb-8">
-                            ¿Listo para el <span className="text-christmas-red">Hechizo Navideño?</span>
+                            ¿Listo para el <span className="text-reyes-gold">Hechizo de Reyes?</span>
                         </h2>
                         <p className="text-slate-400 max-w-2xl mx-auto mb-10">
                             Contáctanos directamente por WhatsApp para personalizar tu pedido mágico.
@@ -46,7 +46,7 @@ export default function Home() {
                             href="https://wa.me/5493874094328?text=Hola!%20Me%20gustar%C3%ADa%20hacer%20un%20pedido%20m%C3%A1gico%20%F0%9F%8D%AC"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="inline-flex items-center gap-2 bg-christmas-green hover:bg-green-700 text-white px-8 py-4 rounded-full font-bold text-lg transition-all hover:shadow-[0_0_30px_rgba(21,128,61,0.4)] transform hover:-translate-y-1 mb-12"
+                            className="inline-flex items-center gap-2 bg-reyes-purple hover:bg-reyes-blue text-white px-8 py-4 rounded-full font-bold text-lg transition-all hover:shadow-[0_0_30px_rgba(107,33,168,0.4)] transform hover:-translate-y-1 mb-12"
                         >
                             <MessageCircle size={24} />
                             Chat en WhatsApp

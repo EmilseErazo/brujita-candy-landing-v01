@@ -28,7 +28,7 @@ export default function Hero() {
                     className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 backdrop-blur-sm mb-8"
                 >
                     <Sparkles size={16} className="text-christmas-gold" />
-                    <span className="text-sm text-slate-300 tracking-wide">Dulces artesanales con un toque de Magia Navideña</span>
+                    <span className="text-sm text-slate-300 tracking-wide">Dulces artesanales con un toque de Magia</span>
                 </motion.div>
 
                 <motion.h1
@@ -39,7 +39,7 @@ export default function Hero() {
                 >
                     Sabor que <br />
                     <span className="text-transparent bg-clip-text bg-gradient-to-r from-christmas-red via-red-500 to-christmas-gold animate-shimmer bg-[length:200%_auto]">
-                        Hechiza tu Navidad
+                        Hechiza tu Celebración
                     </span>
                 </motion.h1>
 
@@ -61,7 +61,7 @@ export default function Hero() {
                 >
                     <a href="#products" className="group relative px-8 py-4 bg-christmas-red rounded-full text-white font-bold text-lg overflow-hidden transition-all hover:scale-105 hover:shadow-[0_0_40px_rgba(239,68,68,0.4)]">
                         <span className="relative z-10 flex items-center gap-2">
-                            Ver Catálogo Navideño <ArrowRight className="group-hover:translate-x-1 transition-transform" />
+                            Ver Catálogo Mágico <ArrowRight className="group-hover:translate-x-1 transition-transform" />
                         </span>
                         <div className="absolute inset-0 bg-gradient-to-r from-red-600 to-christmas-red opacity-0 group-hover:opacity-100 transition-opacity" />
                     </a>
