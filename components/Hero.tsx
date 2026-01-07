@@ -11,7 +11,7 @@ export default function Hero() {
             {/* Background Image */}
             <div className="absolute inset-0 z-0">
                 <Image
-                    src="/images/home-banner-merlina.jpg"
+                    src="/images/hero-new-bg.jpg"
                     alt="Brujita Candy Merlina Theme"
                     fill
                     className="object-cover"
@@ -20,56 +20,57 @@ export default function Hero() {
                 <div className="absolute inset-0 bg-slate-950/70" /> {/* Overlay for readability */}
             </div>
 
-            <div className="container mx-auto px-4 relative z-10 text-center">
-                <motion.div
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.8 }}
-                    className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 backdrop-blur-sm mb-8"
-                >
-                    <Sparkles size={16} className="text-christmas-gold" />
-                    <span className="text-sm text-slate-300 tracking-wide">Dulces artesanales con un toque de Magia</span>
-                </motion.div>
+            <div className="container mx-auto px-4 relative z-10">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                    <div className="text-left md:pl-0 max-w-[500px]">
+                        <motion.div
+                            initial={{ opacity: 0, y: 20 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.8 }}
+                            className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 backdrop-blur-sm mb-8"
+                        >
+                            <Sparkles size={16} className="text-christmas-gold" />
+                            <span className="text-sm text-slate-300 tracking-wide">Todo listo para un regreso a clases mágico</span>
+                        </motion.div>
 
-                <motion.h1
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.8, delay: 0.2 }}
-                    className="text-5xl md:text-7xl lg:text-8xl font-bold text-white mb-6 tracking-tight"
-                >
-                    Sabor que <br />
-                    <span className="text-transparent bg-clip-text bg-gradient-to-r from-christmas-red via-red-500 to-christmas-gold animate-shimmer bg-[length:200%_auto]">
-                        Hechiza tu Celebración
-                    </span>
-                </motion.h1>
+                        <motion.h1
+                            initial={{ opacity: 0, y: 20 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.8, delay: 0.2 }}
+                            className="text-5xl md:text-6xl lg:text-[70px] font-bold text-white mb-6 tracking-tight leading-tight"
+                        >
+                            Magia y orden <br />
+                            <span className="text-transparent bg-clip-text bg-gradient-to-r from-christmas-red via-red-500 to-christmas-gold animate-shimmer bg-[length:200%_auto]">
+                                para su Regreso a Clases
+                            </span>
+                        </motion.h1>
 
-                <motion.p
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.8, delay: 0.4 }}
-                    className="text-lg md:text-xl text-slate-400 max-w-2xl mx-auto mb-10"
-                >
-                    Descubre nuestra colección de gomitas encantadas, chocolates místicos y pociones dulces.
-                    Cada bocado es una experiencia mágica.
-                </motion.p>
+                        <motion.p
+                            initial={{ opacity: 0, y: 20 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.8, delay: 0.4 }}
+                            className="text-lg md:text-xl text-slate-400 max-w-2xl mb-10"
+                        >
+                            Descubrí nuestras etiquetas indestructibles y combos personalizados diseñados para durar todo el año
+                        </motion.p>
 
-                <motion.div
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.8, delay: 0.6 }}
-                    className="flex flex-col md:flex-row gap-4 justify-center items-center"
-                >
-                    <a href="#products" className="group relative px-8 py-4 bg-christmas-red rounded-full text-white font-bold text-lg overflow-hidden transition-all hover:scale-105 hover:shadow-[0_0_40px_rgba(239,68,68,0.4)]">
-                        <span className="relative z-10 flex items-center gap-2">
-                            Ver Catálogo Mágico <ArrowRight className="group-hover:translate-x-1 transition-transform" />
-                        </span>
-                        <div className="absolute inset-0 bg-gradient-to-r from-red-600 to-christmas-red opacity-0 group-hover:opacity-100 transition-opacity" />
-                    </a>
-
-                    <a href="#about" className="px-8 py-4 rounded-full text-white font-medium border border-white/10 hover:bg-white/5 transition-all hover:border-magic-lime/50">
-                        Conocer la Historia
-                    </a>
-                </motion.div>
+                        <motion.div
+                            initial={{ opacity: 0, y: 20 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.8, delay: 0.6 }}
+                            className="flex flex-col md:flex-row gap-4 justify-start items-center md:items-start"
+                        >
+                            <a href="#back-to-school" className="group relative px-8 py-4 bg-christmas-red rounded-full text-white font-bold text-lg overflow-hidden transition-all hover:scale-105 hover:shadow-[0_0_40px_rgba(239,68,68,0.4)]">
+                                <span className="relative z-10 flex items-center gap-2">
+                                    Ver Colección Escolar <ArrowRight className="group-hover:translate-x-1 transition-transform" />
+                                </span>
+                                <div className="absolute inset-0 bg-gradient-to-r from-red-600 to-christmas-red opacity-0 group-hover:opacity-100 transition-opacity" />
+                            </a>
+                        </motion.div>
+                    </div>
+                    {/* Empty column for spacing/image visualization */}
+                    <div></div>
+                </div>
             </div>
 
             {/* Floating Elements */}

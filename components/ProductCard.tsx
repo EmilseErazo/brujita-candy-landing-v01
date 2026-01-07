@@ -90,19 +90,19 @@ export default function ProductCard({
                     <div className="flex flex-col">
                         {originalPrice ? (
                             <div className="flex flex-col">
-                                <span className="text-lg text-slate-400 line-through font-semibold">
+                                <span className="text-lg text-slate-400 line-through font-semibold mb-1">
                                     ${formatPrice(originalPrice)}
                                 </span>
-                                <span className="text-xl font-bold text-christmas-red flex flex-wrap items-baseline gap-1">
-                                    ${formatPrice(typeof price === 'number' ? price : 0)}
-                                    <span className="text-xs font-normal text-christmas-red">con Transferencia o depósito</span>
-                                </span>
-                                {discountPercentage && (
-                                    <span className="text-xs mt-1 block leading-tight">
-                                        <span className="text-christmas-red font-bold">{discountPercentage}% de descuento</span>
-                                        <span className="text-slate-500"> pagando con transferencia o efectivo</span>
+                                <div className="flex flex-wrap items-baseline gap-2">
+                                    <span className="text-3xl font-bold text-christmas-red">
+                                        ${formatPrice(typeof price === 'number' ? price : 0)}
                                     </span>
-                                )}
+                                    <span className="text-sm font-normal text-christmas-red">con Transferencia o depósito</span>
+                                </div>
+                                <span className="text-xs mt-1 block leading-tight">
+                                    <span className="text-christmas-red font-bold">20% de descuento</span>
+                                    <span className="text-slate-500"> pagando con transferencia o efectivo</span>
+                                </span>
                             </div>
                         ) : (
                             typeof price === 'number' || priceCash ? (

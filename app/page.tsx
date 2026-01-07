@@ -7,8 +7,8 @@ import AboutSection from '@/components/AboutSection';
 import Footer from '@/components/Footer';
 import WhatsAppButton from '@/components/WhatsAppButton';
 import Starfall from '@/components/Starfall';
-import ReyesMagos from '@/components/ReyesMagos';
 import GardenSection from '@/components/GardenSection';
+import BackToSchoolSection from '@/components/BackToSchoolSection';
 import CartSidebar from '@/components/CartSidebar';
 import CartFloatingButton from '@/components/CartFloatingButton';
 import { CartProvider } from '@/context/CartContext';
@@ -19,7 +19,6 @@ export default function Home() {
         <CartProvider>
             <main className="min-h-screen bg-slate-950 text-white selection:bg-reyes-purple selection:text-white relative">
                 <Starfall />
-                <ReyesMagos />
                 <Navbar />
                 <CartSidebar />
                 <CartFloatingButton />
@@ -27,6 +26,8 @@ export default function Home() {
                 <Hero />
 
                 <ProductGrid />
+
+                <BackToSchoolSection />
 
                 <GardenSection />
 

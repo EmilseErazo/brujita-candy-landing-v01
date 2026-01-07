@@ -23,6 +23,7 @@ export default function Navbar() {
         { name: 'Nuestros Hechizos', href: '#hechizos' },
         { name: 'Nuestras Pócimas Mágicas', href: '#pocimas' },
         { name: 'Noches Mágicas', href: '#noches-magicas' },
+        { name: 'Vuelta al Cole 2026', href: '#back-to-school' },
         { name: 'Set de Jardín Mágicos', href: '#garden' },
     ];
 
