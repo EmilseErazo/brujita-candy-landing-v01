@@ -85,16 +85,16 @@ const backToSchoolProducts = [
     {
         id: 'school-4',
         title: "Hechizo Textil",
-        price: 12000,
-        priceCash: 12000,
-        priceCard: 14400,
-        originalPrice: 14400,
-        discountPercentage: 17,
+        price: 6500,
+        priceCash: 6500,
+        priceCard: 8125,
+        originalPrice: 8125,
+        discountPercentage: 20,
         description: "¡Identificá sus prendas de forma permanente y olvidate de las pérdidas! Nuestras etiquetas termotransferibles son la solución mágica para uniformes, camperas y delantales.",
         image: "/images/textil-shirt.jpg",
         tag: "Etiquetas Ropa",
         features: [
-            "Pack Personalizado: 40 etiquetas aprox.",
+            "Pack Personalizado: 1 Plancha (30x19cm)",
             "Aplicación Mágica: Se pegan con plancha (15s)",
             "Resistencia Total: Lavarropas y secarropas",
             "Suavidad: No pica ni molesta"
@@ -118,7 +118,7 @@ const backToSchoolProducts = [
         image: "/images/dtf-uv-mix.jpg",
         tag: "DTF UV",
         features: [
-            "Pack Personalizado: 30 etiquetas (28x19cm)",
+            "Pack Personalizado: 1 Plancha (30x19cm)",
             "Súper Poderes: Resistentes agua/microondas",
             "Durabilidad: No se rayan ni pierden color",
             "Ideal: Vasos, tuppers, vidrio y plástico"
