@@ -97,7 +97,7 @@ export default function ProductCard({
                                     <span className="text-3xl font-bold text-christmas-red">
                                         ${formatPrice(typeof price === 'number' ? price : 0)}
                                     </span>
-                                    <span className="text-sm font-normal text-christmas-red">con Transferencia o depósito</span>
+                                    <span className="text-sm font-normal text-christmas-red">con Transferencia o efectivo</span>
                                 </div>
                                 <span className="text-xs mt-1 block leading-tight">
                                     <span className="text-christmas-red font-bold">20% de descuento</span>
