@@ -41,7 +41,7 @@ export default function Footer() {
                 <div className="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-slate-500">
                     <p>&copy; {new Date().getFullYear()} Brujita Candy Bar. Todos los derechos reservados.</p>
                     <p className="flex items-center gap-1">
-                        Hecho con <Heart size={14} className="text-red-500 fill-red-500" /> por <span className="text-white">Antigravity</span>
+                        Hecho con <Heart size={14} className="text-red-500 fill-red-500" /> por <span className="text-white">Emilse Erazo</span>
                     </p>
                 </div>
             </div>
