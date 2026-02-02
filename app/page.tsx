@@ -9,6 +9,7 @@ import WhatsAppButton from '@/components/WhatsAppButton';
 import Starfall from '@/components/Starfall';
 import GardenSection from '@/components/GardenSection';
 import BackToSchoolSection from '@/components/BackToSchoolSection';
+import TesorosEncantadosSection from '@/components/TesorosEncantadosSection';
 import CartSidebar from '@/components/CartSidebar';
 import CartFloatingButton from '@/components/CartFloatingButton';
 import { CartProvider } from '@/context/CartContext';
@@ -28,6 +29,8 @@ export default function Home() {
                 <ProductGrid />
 
                 <BackToSchoolSection />
+
+                <TesorosEncantadosSection />
 
                 <GardenSection />
 

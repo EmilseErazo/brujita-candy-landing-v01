@@ -24,6 +24,7 @@ export default function Navbar() {
         { name: 'Nuestras Pócimas Mágicas', href: '#pocimas' },
         { name: 'Noches Mágicas', href: '#noches-magicas' },
         { name: 'Vuelta al Cole 2026', href: '#back-to-school' },
+        { name: 'Tesoros Encantados', href: '#tesoros-encantados' },
         { name: 'Set de Jardín Mágicos', href: '#garden' },
     ];
 
